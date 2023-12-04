@@ -10,7 +10,7 @@ Post
 {% block content %}
     <h1>Все новости</h1>
     <hr>
-    {% if post %}
+    {% if news %}
         <table>
             <tr>
                 <td>Заголовок</td>
@@ -20,9 +20,9 @@ Post
 
             {% for separate_news in news %}
             <tr>
-                <td>{{ post.title }}</td>
-                <td>{{ post.created_date }}</td>
-                <td>{{ post.text }}</td>
+                <td>{{ separate_news.title }}</td>
+                <td>{{ separate_news.created_date.time_now|date:'d M Y' }}</td>
+                <td>{{ separate_news.text|truncatewords:20 }}</td>
             </tr>
             {% endfor %}
         </table>
