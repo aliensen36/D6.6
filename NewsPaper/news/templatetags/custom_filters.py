@@ -13,3 +13,5 @@ def censor(word):
         raise ValueError(
             'custom_filters -> censor -> A string is expected, but a different data type has been entered')
     return word
+
+
